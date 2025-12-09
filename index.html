@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Client Portfolio - ABC Consultants</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Top Navigation -->
+  <header class="topbar">
+    <div class="brand">
+      <h1 class="brand-name">Client Name</h1>
+      <p class="brand-contact">
+        <img src="/img/email.png" class="icon" /> client@example.com <br>
+        <img src="/img/phone.png" class="icon" /> +1000000000
+      </p>
+    </div>
+
+
+    <nav class="navbar">
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#recommendations">Recommendations</a>
+    </nav>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="section about-section">
+    <div class="about-content">
+      <div class="about-image">
+        <img src="/img/profile.png" alt="Client illustration"/>
+      </div>
+      <div class="about-text">
+        <h2>Hi, I'm Your Next Team Member! 👋</h2>
+        <p>
+          I am a full-stack web developer with experience in building responsive,
+          user-friendly applications. I enjoy solving real-world problems with
+          clean, maintainable code and collaborating closely with designers,
+          product owners, and other engineers. ABC Consultants is supporting my
+          search for a role where I can contribute to modern web applications and
+          continue growing my skills.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <img src="/img/html.png" alt="HTML Logo" />
+        <h3>HTML</h3>
+        <p>2 years experience</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="/img/css.png" alt="CSS Logo" />
+        <h3>CSS</h3>
+        <p>2 years experience</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="/img/javascript.png" alt="JavaScript Logo" />
+        <h3>JavaScript</h3>
+        <p>1.5 years experience</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="/img/react.png" alt="React Logo" />
+        <h3>React</h3>
+        <p>1 year experience</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="/img/node.png" alt="Node.js Logo" />
+        <h3>Node.js</h3>
+        <p>1 year experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-list">
+      <div class="project-item">
+        <h3>Inventory Dashboard</h3>
+        <ul>
+          <li>
+            Built a web dashboard that tracks stock levels and order status for
+            a small retail business using HTML, CSS, JavaScript, and REST APIs.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <h3>Online Learning Portal</h3>
+        <ul>
+          <li>
+            Developed a multi-page learning site with course listings, progress
+            tracking, and responsive layouts optimized for both desktop and
+            mobile devices.
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <h3>Trip Planner Tool</h3>
+        <ul>
+          <li>
+            Created a travel planning web app that allows users to organize
+            destinations, budgets, and timelines, integrating third-party APIs
+            for location information.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendations Section -->
+  <section id="recommendations" class="section">
+    <h2 class="section-title">Recommendations</h2>
+
+    <div id="recommendation-list" class="recommendations-row">
+      <div class="recommendation-card">
+        <p>
+          “A reliable and thoughtful developer who quickly understands project
+          requirements and delivers high-quality work.”
+        </p>
+      </div>
+
+      <div class="recommendation-card">
+        <p>
+          “Shows strong ownership of tasks and collaborates effectively with
+          cross-functional teams to ship features on time.”
+        </p>
+      </div>
+
+      <div class="recommendation-card">
+        <p>
+          “Consistently brings clear communication, solid problem-solving
+          skills, and a positive attitude to every project.”
+        </p>
+      </div>
+    </div>
+
+    <!-- New Recommendation Form -->
+    <div class="new-recommendation">
+      <h3>Leave a Recommendation</h3>
+      <form id="recommendation-form" onsubmit="handleRecommendationSubmit(event)">
+        <input type="text" id="rec-name" placeholder="Name (Optional)" />
+        <textarea id="rec-message" rows="4" placeholder="Message"></textarea>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Popup Confirmation -->
+  <div id="popup" class="popup hidden">
+    Thank you for submitting a recommendation!
+  </div>
+
+  <!-- Home Icon (scroll to top) -->
+  <a href="#home" class="home-icon" title="Back to top">⬆</a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

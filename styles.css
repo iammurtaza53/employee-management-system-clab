@@ -1,0 +1,272 @@
+:root {
+  --primary: #5a0fc8;      /* purple like sample */
+  --primary-dark: #3d0890;
+  --text-main: #333333;
+  --card-border: #e0e0e0;
+  --bg-light: #fafafa;
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --radius-card: 8px;
+  --transition: 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+}
+
+/* Top Bar */
+
+.topbar {
+  background: var(--primary);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+}
+
+.brand-name {
+  margin: 0;
+  font-size: 22px;
+}
+
+.brand-contact {
+  margin: 4px 0 0;
+  font-size: 13px;
+}
+
+.navbar {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+/* Task 2: hover = bold + underline */
+.navbar a:hover {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Sections */
+
+.section {
+  padding: 40px 80px;
+}
+
+.section-title {
+  color: var(--primary);
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+/* About Section */
+
+.about-section {
+  padding-top: 50px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-image img {
+  width: 500px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: top;
+}
+
+.about-text h2 {
+  color: var(--primary);
+  font-size: 32px;
+  margin-top: 0;
+}
+
+/* Skills */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-soft);
+  padding: 18px 14px;
+  text-align: center;
+}
+
+.skill-card img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.skill-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.skill-card p {
+  margin: 6px 0 0;
+  font-size: 13px;
+}
+
+/* Projects */
+
+.project-list {
+  max-width: 900px;
+}
+
+.project-item {
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: var(--radius-card);
+  border-left: 4px solid var(--primary);
+  margin-bottom: 16px;
+}
+
+.project-item h3 {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+/* Recommendations */
+
+.recommendations-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.recommendation-card {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-soft);
+  padding: 16px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* New Recommendation Form */
+
+.new-recommendation h3 {
+  margin-bottom: 12px;
+}
+
+#recommendation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+}
+
+#recommendation-form input,
+#recommendation-form textarea {
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+}
+
+.submit-btn {
+  align-self: flex-start;
+  padding: 8px 20px;
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* Popup */
+
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  box-shadow: var(--shadow-soft);
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Home Icon – Task 8 */
+
+.home-icon {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+}
+
+.home-icon:hover {
+  background: var(--primary-dark);
+}
+
+.icon {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section {
+    padding: 30px 20px;
+  }
+}
